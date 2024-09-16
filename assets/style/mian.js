@@ -2,7 +2,7 @@ import {StyleSheet} from 'react-native';
 
 const style = StyleSheet.create({
   hedaer: {
-    paddingTop: 30,
+    paddingTop: 10,
     paddingLeft: 17,
     paddingRight: 26,
     paddingEnd: 17,
@@ -46,9 +46,9 @@ const style = StyleSheet.create({
     borderRadius: 50,
   },
   storyImage: {
-    height: 60,
-    width: 60,
-    borderRadius: 30,
+    height: 40,
+    width: 40,
+    borderRadius: 20,
     backgroundColor: 'grey',
   },
   storyName: {

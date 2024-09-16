@@ -6,7 +6,7 @@ const style = StyleSheet.create({
         fontFamily: 'Inter',
         fontWeight: '600',
         fontSize: 24,
-        lineHeight: 29,
+        lineHeight: 25,
     },
 });
 

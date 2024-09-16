@@ -1,8 +1,8 @@
 import React from 'react';
 
 import {FlatList, View} from 'react-native';
-import UserStory from './UserStory/UserStory';
-import { useState } from 'react';
+import UserStory from './UserStory';
+import {useState} from 'react';
 
 const UserStoryList = () => {
   // all of the items in the stories.
@@ -59,27 +59,29 @@ const UserStoryList = () => {
     return data.slice(startIndex, startIndex + pageSize);
   };
 
-  return (<View>
-    <FlatList
-      onEndReachedThreshold={0.1}
-      keyExtractor={item => item.id.toString()}
-      onEndReached={() => {
-        if (!isLoading) {
-          setIsLoading(true);
-          setRenderData(prev => [
-            ...prev,
-            ...pagination(data, pageNumber + 1, pageSize),
-          ]);
-          setIsLoading(false);
-        }
-      }}
-      showsHorizontalScrollIndicator={false}
-      horizontal={true}
-      data={renderData}
-      renderItem={({item}) => {
-        return <UserStory firstName={item.firstName} />;
-      }}
-    /></View>
+  return (
+    <View>
+      <FlatList
+        onEndReachedThreshold={0.1}
+        keyExtractor={item => item.id.toString()}
+        onEndReached={() => {
+          if (!isLoading) {
+            setIsLoading(true);
+            setRenderData(prev => [
+              ...prev,
+              ...pagination(data, pageNumber + 1, pageSize),
+            ]);
+            setIsLoading(false);
+          }
+        }}
+        showsHorizontalScrollIndicator={false}
+        horizontal={true}
+        data={renderData}
+        renderItem={({item}) => {
+          return <UserStory firstName={item.firstName} />;
+        }}
+      />
+    </View>
   );
 };
 
