@@ -36,6 +36,28 @@ const style = StyleSheet.create({
     fontWeight: '600',
     color: '#FFFFFF',
   },
+  userStoryContainer: {
+    paddingHorizontal: 15,
+  },
+  storyImageContainer: {
+    borderWidth: 1,
+    borderColor: '#F35BAC',
+    padding: 3,
+    borderRadius: 50,
+  },
+  storyImage: {
+    height: 40,
+    width: 40,
+    borderRadius: 20,
+    backgroundColor: 'grey',
+  },
+  storyName: {
+    textAlign: 'center',
+    fontFamily: 'Inter',
+    margin: 8,
+    lineHeight: 17,
+    fontSize: 14,
+  },
 });
 
 export default style;
