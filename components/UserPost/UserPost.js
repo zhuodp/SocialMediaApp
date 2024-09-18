@@ -9,13 +9,14 @@ import {
   faComment,
   faHeart,
 } from '@fortawesome/free-regular-svg-icons';
+import UserProfileImage from '../UserProfileImage/UserProfileImage';
 
 const UserPost = props => {
   return (
     <View style={postStyle.userPostCard}>
       {/* title */}
       <View style={postStyle.userPostTitleBar}>
-        <Image style={postStyle.userPostAvatar} source={''} />
+        <UserProfileImage />
         <View
           style={{
             flexDirection: 'column',

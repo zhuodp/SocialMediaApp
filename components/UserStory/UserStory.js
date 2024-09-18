@@ -2,14 +2,13 @@ import React from 'react';
 import {Image, Text, View} from 'react-native';
 import PropTypes from 'prop-types';
 import style from '../../assets/style/main';
+import UserProfileImage from '../UserProfileImage/UserProfileImage';
 
 const UserStory = props => {
   return (
     <View style={{padding: 5, flex: 1, alignItems: 'center'}}>
-      <View style={style.storyImageContainer}>
-        <Image style={style.storyImage} />
-      </View>
-      <Text style={{marginTop: 3}}>{props.firstName}</Text>
+      <UserProfileImage />
+      <Text style={{marginTop: 3, fontSize: 12}}>{props.firstName}</Text>
     </View>
   );
 };

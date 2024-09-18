@@ -47,9 +47,9 @@ const style = StyleSheet.create({
     borderRadius: 50,
   },
   storyImage: {
-    height: 40,
-    width: 40,
-    borderRadius: 20,
+    height: 36,
+    width: 36,
+    borderRadius: 18,
     backgroundColor: 'grey',
   },
   storyName: {
