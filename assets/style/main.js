@@ -14,6 +14,7 @@ const style = StyleSheet.create({
   messageIcon: {
     backgroundColor: '#F9FAFB',
     padding: 20,
+    paddingEnd: 4,
     borderRadius: 100,
   },
   messageNumberContainer: {
@@ -26,7 +27,7 @@ const style = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    right: 16,
+    right: 0,
     top: 16,
   },
   messageNumber: {

@@ -1,7 +1,8 @@
 import React from 'react';
-import { View, FlatList } from 'react-native';
-import { useState } from 'react';
+import {View, FlatList} from 'react-native';
+import {useState} from 'react';
 import UserPost from './UserPost';
+import usePost from '../../assets/style/userPost';
 
 const UserPostList = () => {
   const data = [
@@ -93,10 +94,10 @@ const UserPostList = () => {
     return data.slice(startIndex, startIndex + pageSize);
   };
 
-return (
-    <View>
+  return (
+    <View style={usePost.userPostListContainer}>
       <FlatList
-        onEndReachedThreshold={0.1}
+        onEndReachedThreshold={0.5}
         keyExtractor={item => item.id.toString()}
         onEndReached={() => {
           if (!isLoading) {
@@ -108,11 +109,20 @@ return (
             setIsLoading(false);
           }
         }}
-        showsHorizontalScrollIndicator={false}
-        horizontal={true}
+        showsVerticalScrollIndicator={false}
+        horizontal={false}
         data={renderData}
         renderItem={({item}) => {
-          return <UserPost firstName={item.firstName} />;
+          return (
+            <UserPost
+              firstName={item.firstName}
+              lastName={item.lastName}
+              likes={item.likes}
+              comments={item.comments}
+              bookmarks={item.bookmarks}
+              location={item.location}
+            />
+          );
         }}
       />
     </View>

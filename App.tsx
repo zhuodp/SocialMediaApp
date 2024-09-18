@@ -11,9 +11,10 @@ import {Pressable, SafeAreaView, ScrollView, Text, View} from 'react-native';
 
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
-import style from './assets/style/mian';
+import style from './assets/style/main';
 import UserStoryList from './components/UserStory/UserStoryList';
 import Title from './components/title/Title';
+import UserPostList from './components/UserPost/UserPostList';
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         <View style={style.userStoryContainer}>
           <UserStoryList />
         </View>
+        <UserPostList />
       </ScrollView>
     </SafeAreaView>
   );

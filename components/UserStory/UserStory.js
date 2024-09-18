@@ -1,7 +1,7 @@
 import React from 'react';
 import {Image, Text, View} from 'react-native';
 import PropTypes from 'prop-types';
-import style from '../../assets/style/mian';
+import style from '../../assets/style/main';
 
 const UserStory = props => {
   return (
