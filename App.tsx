@@ -14,6 +14,7 @@ import {
   ScrollView,
   Text,
   View,
+  StatusBar,
 } from 'react-native';
 
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
@@ -36,6 +37,7 @@ const App = () => {
 
   return (
     <SafeAreaView>
+      <StatusBar backgroundColor={'transparent'} barStyle={'dark-content'} />
       <ScrollView>
         <View style={style.hedaer}>
           <Title title={"Let's explore"} />
