@@ -6,8 +6,15 @@
  * @format
  */
 
-import React from 'react';
-import {Pressable, SafeAreaView, ScrollView, Text, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import {
+  Dimensions,
+  Pressable,
+  SafeAreaView,
+  ScrollView,
+  Text,
+  View,
+} from 'react-native';
 
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEnvelope} from '@fortawesome/free-regular-svg-icons';
@@ -17,6 +24,16 @@ import Title from './components/title/Title';
 import UserPostList from './components/UserPost/UserPostList';
 
 const App = () => {
+  const [screenData, setScreenData] = useState(Dimensions.get('screen'));
+  console.log("screen data", screenData);
+
+  useEffect(() => {
+    Dimensions.addEventListener("change", result => {
+        console.log("change screen data ", result.screen);
+        setScreenData(result.screen);
+    });
+  }, []);
+
   return (
     <SafeAreaView>
       <ScrollView>

@@ -2,9 +2,7 @@ import React from 'react';
 import {View, FlatList} from 'react-native';
 import {useState} from 'react';
 import UserPost from './UserPost';
-import usePost from '../../assets/style/userPost';
-import UserStoryList from '../UserStory/UserStoryList';
-import style from '../../assets/style/main';
+import postStyle from '../../assets/style/userPost';
 
 const UserPostList = () => {
   const data = [
@@ -97,7 +95,7 @@ const UserPostList = () => {
   };
 
   return (
-    <View style={usePost.userPostListContainer}>
+    <View style={postStyle.userPostListContainer}>
       <FlatList
         onEndReachedThreshold={0.5}
         keyExtractor={item => item.id.toString()}
