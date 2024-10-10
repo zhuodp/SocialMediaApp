@@ -14,7 +14,6 @@ import {ProfileTabNavigation} from '../../navigation/MainNavigation';
 const Profile = () => {
   return (
     <SafeAreaView style={[globalStyle.backgroundWhite, globalStyle.flex]}>
-      <ScrollView>
         <View style={style.profileImageContainer}>
           <View style={style.profileImageContent}>
             <Image style={style.profileImage} />
@@ -36,14 +35,13 @@ const Profile = () => {
           <View style={style.profileStat}>
             <Text style={style.statContent}>100</Text>
             <Text style={style.statTitle}>Posts</Text>
-          </View>
+          </View> 
         </View>
         <View style={style.divider} />
 
-        <View style={{height: '100%'}}>
+      <View style={{height: '100%'}}>
             <ProfileTabNavigation />
         </View>
-      </ScrollView>
     </SafeAreaView>
   );
 };
