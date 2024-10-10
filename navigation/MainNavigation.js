@@ -6,6 +6,7 @@ import {DrawerActions} from '@react-navigation/native';
 import Routes from './Routes';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import {Text, View} from 'react-native';
+import ProfileTabTitle from '../components/ProfileTabTitle/ProfileTabTitle';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -13,7 +14,13 @@ const ProfileTabs = createMaterialTopTabNavigator();
 
 const Tab1 = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View
+      style={{
+        backgroundColor: 'white',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
       <Text>This is tab1</Text>
     </View>
   );
@@ -21,7 +28,13 @@ const Tab1 = () => {
 
 const Tab2 = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View
+      style={{
+        backgroundColor: 'white',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
       <Text>This is tab2</Text>
     </View>
   );
@@ -29,7 +42,13 @@ const Tab2 = () => {
 
 const Tab3 = () => {
   return (
-    <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View
+      style={{
+        backgroundColor: 'white',
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+      }}>
       <Text>This is tab3</Text>
     </View>
   );
@@ -37,10 +56,43 @@ const Tab3 = () => {
 
 export const ProfileTabNavigation = () => {
   return (
-    <ProfileTabs.Navigator>
-      <ProfileTabs.Screen name={'Tab1'} component={Tab1} />
-      <ProfileTabs.Screen name={'Tab2'} component={Tab2} />
-      <ProfileTabs.Screen name={'Tab3'} component={Tab3} />
+    <ProfileTabs.Navigator
+      screenOptions={{
+        tabBarIndicatorStyle: {
+          backgroundColor: 'transparent',
+        },
+        tabBarStyle: {
+          elevation: 0,
+          zIndex: 0,
+        },
+      }}>
+      <ProfileTabs.Screen
+        name={'Tab1'}
+        component={Tab1}
+        options={{
+          tabBarLabel: ({focused}) => {
+            return <ProfileTabTitle title={'Photos'} isFocused={focused} />;
+          },
+        }}
+      />
+      <ProfileTabs.Screen
+        name={'Tab2'}
+        component={Tab2}
+        options={{
+          tabBarLabel: ({focused}) => {
+            return <ProfileTabTitle title={'Videos'} isFocused={focused} />;
+          },
+        }}
+      />
+      <ProfileTabs.Screen
+        name={'Tab3'}
+        component={Tab3}
+        options={{
+          tabBarLabel: ({focused}) => {
+            return <ProfileTabTitle title={'Saved'} isFocused={focused} />;
+          },
+        }}
+      />
     </ProfileTabs.Navigator>
   );
 };
