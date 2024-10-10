@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import globalStyle from '../../assets/style/globalStyle';
 import style from './style';
+import {ProfileTabNavigation} from '../../navigation/MainNavigation';
 
 const Profile = () => {
   return (
@@ -38,6 +39,10 @@ const Profile = () => {
           </View>
         </View>
         <View style={style.divider} />
+
+        <View style={{height: '100%'}}>
+            <ProfileTabNavigation />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
