@@ -23,38 +23,14 @@ import style from './assets/style/main';
 import UserStoryList from './components/UserStory/UserStoryList';
 import Title from './components/title/Title';
 import UserPostList from './components/UserPost/UserPostList';
+import Home from './screens/Home/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import MainNavigation from './navigation/MainNavigation';
 
 const App = () => {
-  const [screenData, setScreenData] = useState(Dimensions.get('screen'));
-  console.log("screen data", screenData);
-
-  useEffect(() => {
-    Dimensions.addEventListener("change", result => {
-        console.log("change screen data ", result.screen);
-        setScreenData(result.screen);
-    });
-  }, []);
-
-  return (
-    <SafeAreaView>
-      <StatusBar backgroundColor={'transparent'} barStyle={'dark-content'} />
-      <ScrollView>
-        <View style={style.hedaer}>
-          <Title title={"Let's explore"} />
-          <Pressable style={style.messageIcon}>
-            <FontAwesomeIcon icon={faEnvelope} color={'#CACDDE'} size={20} />
-            <View style={style.messageNumberContainer}>
-              <Text style={style.messageNumber}>2</Text>
-            </View>
-          </Pressable>
-        </View>
-        <View style={style.userStoryContainer}>
-          <UserStoryList />
-        </View>
-        <UserPostList />
-      </ScrollView>
-    </SafeAreaView>
-  );
+  return(<NavigationContainer>
+    <MainNavigation />
+  </NavigationContainer>);
 };
 
 export default App;
