@@ -5,7 +5,6 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {DrawerActions} from '@react-navigation/native';
 import Routes from './Routes';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
-import {Text, View} from 'react-native';
 import ProfileTabTitle from '../components/ProfileTabTitle/ProfileTabTitle';
 import ProfileTabPost from '../components/ProfileTabPost/ProfileTabPost';
 

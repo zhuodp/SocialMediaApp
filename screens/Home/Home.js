@@ -19,7 +19,6 @@ import Title from '../../components/title/Title';
 import UserPostList from '../../components/UserPost/UserPostList';
 
 const Home = ({navigation}) => {
-
   const [screenData, setScreenData] = useState(Dimensions.get('screen'));
   console.log('screen data', screenData);
 
@@ -38,7 +37,9 @@ const Home = ({navigation}) => {
           <Title title={"Let's explore"} />
           <Pressable
             style={style.messageIcon}
-            onPress={() => {navigation.navigate('Profile')}}>
+            onPress={() => {
+              navigation.navigate('Profile');
+            }}>
             <FontAwesomeIcon icon={faEnvelope} color={'#CACDDE'} size={20} />
             <View style={style.messageNumberContainer}>
               <Text style={style.messageNumber}>2</Text>

@@ -1,8 +1,7 @@
 import React from 'react';
 
-import {ScrollView, Text, View, Image} from 'react-native';
+import {ScrollView, View, Image} from 'react-native';
 import style from './style';
-import globalStyle from '../../assets/style/globalStyle';
 
 const ProfileTabPost = () => {
   return (

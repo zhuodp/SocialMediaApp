@@ -5,7 +5,6 @@ const style = StyleSheet.create({
     fontSize: 14,
     fontFamily: 'Inter',
     lineHeight: 18,
-    color: 'black',
   },
 });
 
